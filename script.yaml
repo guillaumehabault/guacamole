@@ -1,0 +1,13 @@
+alias: Bilan UV
+sequence:
+  - service: tts.google_translate_say
+    data:
+      entity_id: media_player.salon
+      message: >-
+        L'index UV est actuellement de {{states('sensor.current_uv_index')}},
+        son maximum aujourd'hui de {{states('sensor.max_uv_index')}}, le temps
+        d'exposition maximum pour un phototype 4 de
+        {{states('sensor.skin_type_4_safe_exposure_time')}} minutes."
+      language: fr
+mode: single
+icon: mdi:weather-partly-cloudy
